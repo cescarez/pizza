@@ -36,10 +36,10 @@ $(document).ready(function(){
 
     var size = $("#pizza-size").val();
     var sauce = $("input:radio[name=pizza-sauce]:checked").val();
+    var newPizza = new Pizza(size, sauce);
     $("input:checkbox[name=pizza-topping]:checked").each(function(){
-      toppings.push($(this).val());
+      newPizza.toppings.push($(this).val());
     });
-    var newPizza = Pizza(size, sauce);
 
     newPizza.orderEcho();
     newPizza.priceCalc();
