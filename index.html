@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/jquery-3.3.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <title>Pizza 4 U</title>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <h1>Order a Pizza</h1>
+    </div>
+    <div class="row">
+      <form>
+      <div class="col-md-6">
+        <div class="form-group">
+          <p>Select a pizza size:</p>
+          <select id="pizza-size">
+            <option value="small">Small</option>
+            <option value="medium">Medium</option>
+            <option value="large">Large</option>
+            <option value="extra-large">Extra Large</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <p>Select a sauce base:</p>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-sauce" value="no">
+              None
+            </label>
+          </div>
+        <div class="form-group">
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-sauce" value="marinara" checked>
+              Marinara
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-sauce" value="pesto">
+              Pesto <span class="info">(+ $0.25)</span>
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="pizza-sauce" value="alfredo">
+              Alfredo  <span class="info">(+ $0.25)</span>
+           </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <p>Select topping(s) <span class="info">(+ $0.25/topping)</span></p>
+          <input type="checkbox" name="pizza-topping" value="cheese">Cheese</input>
+          <input type="checkbox" name="pizza-topping" value="pepperoni">Pepperoni</input>
+          <input type="checkbox" name="pizza-topping" value="sausage">Sausage</input>
+          <input type="checkbox" name="pizza-topping" value="bell-pepper">Bell Pepper</input>
+          <input type="checkbox" name="pizza-topping" value="artichoke">Artichoke</input>
+          <input type="checkbox" name="pizza-topping" value="olive">Olive</input>
+          <input type="checkbox" name="pizza-topping" value="mushroom">Mushroom</input>
+          <input type="checkbox" name="pizza-topping" value="spinach">Spinach</input>
+        </div>
+        <button type="submit">Submit</submit>
+      </div>
+      <div class="col-md-6">
+        <p id="order-echo"></p>
+        <p id="price-output"></p>
+      </div>
+    </div>
+    </form>
+  </div>
+</body>
+</html>

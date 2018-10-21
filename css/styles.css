@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Raleway Light";
+  src: url("Raleway-Light.ttf");
+}
+
+@font-face {
+  font-family: "Raleway SemiBold";
+  src: url("Raleway-SemiBold.ttf");
+}
+
+body {
+  font-family: Raleway SemiBold;
+}
+
+h1 {
+  font-family: Raleway Light;
+}
+
+span.info {
+  font-size: 0.75em;
+  font-style: italic;
+}
+
+p#price-output {
+  font-size: 2.0em;
+}
