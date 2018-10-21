@@ -5,11 +5,7 @@ function Pizza(size, sauce) {
 }
 
 Pizza.prototype.priceCalc = function(topping) {
-  var toppingCount = 0;
   var pizzaPrice = 0;
-  for (i=0; i >= this.toppings.length; i++) {
-    toppingCount +=1;
-  }
   if (this.size === "small") {
     pizzaPrice = 8.25;
   } else if (this.size === "medium") {
@@ -19,15 +15,22 @@ Pizza.prototype.priceCalc = function(topping) {
   } else if (this.size === "extra-large") {
     pizzaPrice = 16.50;
   }
+  console.log("Pizza price based on size: " + pizzaPrice)
   if (this.sauce === "pesto" || this.sauce === "alfredo") {
     pizzaPrice += 0.25;
   }
-  pizzaPrice += (toppingCount * 0.25);
+  console.log("Pizza price based on size and sauce: " + pizzaPrice)
+  pizzaPrice += (this.toppings.length * 0.25);
+  console.log("toppings price = + " + (this.toppings.length * 0.25));
   $("#price-output").text("$" + pizzaPrice);
 }
 
 Pizza.prototype.orderEcho = function() {
-$("#order-echo").text("You ordered a " + this.size + " pizza with " + this.sauce + " sauce and " + this.toppings.join(", ") + " toppings.")
+  if (this.toppings.length === 0) {
+    $("#order-echo").text("You ordered a " + this.size + " pizza with " + this.sauce + " sauce and no toppings.")
+  } else {
+    $("#order-echo").text("You ordered a " + this.size + " pizza with " + this.sauce + " sauce and " + this.toppings.join(", ") + " toppings.")
+  }
 }
 
 $(document).ready(function(){
@@ -43,7 +46,5 @@ $(document).ready(function(){
 
     newPizza.orderEcho();
     newPizza.priceCalc();
-
-
   })
 })
