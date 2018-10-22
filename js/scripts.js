@@ -22,7 +22,7 @@ Pizza.prototype.priceCalc = function(topping) {
   console.log("Pizza price based on size and sauce: " + pizzaPrice)
   pizzaPrice += (this.toppings.length * 0.25);
   console.log("toppings price = + " + (this.toppings.length * 0.25));
-  $("#price-output").text("$" + pizzaPrice);
+  $("#price-output").text("$" + pizzaPrice.toFixed(2));
 }
 
 Pizza.prototype.orderEcho = function() {
