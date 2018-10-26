@@ -15,9 +15,9 @@
     </div>
     <div class="row">
       <form>
-      <div class="col-md-6">
+      <div class="col-md-6" id="left-column">
         <div class="form-group">
-          <p>Select a pizza size:</p>
+          <p class="title">Select a pizza size:</p>
           <select id="pizza-size">
             <option value="small">Small</option>
             <option value="medium">Medium</option>
@@ -26,7 +26,7 @@
           </select>
         </div>
         <div class="form-group">
-          <p>Select a sauce base:</p>
+          <p class="title">Select a sauce base:</p>
           <div class="radio">
             <label>
               <input type="radio" name="pizza-sauce" value="no">
@@ -54,11 +54,11 @@
           </div>
         </div>
         <div class="form-group">
-          <p>Select topping(s) <span class="info">(+ $0.25/topping)</span></p>
+          <p class="title">Select topping(s) <span class="info">(+ $0.25/topping)</span></p>
           <input type="checkbox" name="pizza-topping" value="cheese">Cheese</input>
           <input type="checkbox" name="pizza-topping" value="pepperoni">Pepperoni</input>
           <input type="checkbox" name="pizza-topping" value="sausage">Sausage</input>
-          <input type="checkbox" name="pizza-topping" value="bell-pepper">Bell Pepper</input>
+          <input type="checkbox" name="pizza-topping" value="bell-pepper">Bell Pepper</input><br>
           <input type="checkbox" name="pizza-topping" value="artichoke">Artichoke</input>
           <input type="checkbox" name="pizza-topping" value="olive">Olive</input>
           <input type="checkbox" name="pizza-topping" value="mushroom">Mushroom</input>
@@ -66,10 +66,11 @@
         </div>
         <button type="submit">Submit</submit>
       </div>
-      <div class="col-md-6">
-        <p id="order-echo"></p>
-        <p id="price-output"></p>
-      </div>
+    </div>
+    <div class="col-md-6">
+      <img src="pizza.jpg">
+      <p id="order-echo"></p>
+      <p id="price-output"></p>
     </div>
     </form>
   </div>
