@@ -1,4 +1,4 @@
-# Palindromes
+# Order Up!
 
 _Epicodus Week 13, last updated Oct. 21, 2018_
 
